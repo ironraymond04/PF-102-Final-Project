@@ -98,6 +98,7 @@ function offerFromBanker() {
   message.textContent = `Ang gipangayo: ₱${offer.toLocaleString()}. Padayon o Uli?`;
   dealBtn.disabled = false;
   noDealBtn.disabled = false;
+  playSound3();
 
   // Disable clicking on cases
   cases.forEach((caseEl, i) => {
@@ -154,6 +155,12 @@ function playSound2() {
   const audio = new Audio('electronicpingshort.wav');
   audio.play();
 }
+
+function playSound3() {
+  const audio = new Audio('Call.mp3');
+  audio.play();
+}
+
 function endGame() {
   const cases = document.querySelectorAll(".case");
   cases.forEach((caseEl, i) => {
