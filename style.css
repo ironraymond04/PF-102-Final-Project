@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+.case {
+  background-color: #d3d3d3;
+  border: 1px solid #888;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.case.opened {
+  background-color: #aaa;
+  cursor: default;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.value-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  gap: 4px;
+}
+
+.value-item {
+  padding: 5px 10px;
+  background-color: #eee;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.value-item.removed {
+  background-color: #ccc;
+  text-decoration: line-through;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.button-row {
+  margin-top: 10px;
+}
+
+button {
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+#no-deal-btn {
+  background-color: #28a745;
+}
+
+#deal-btn {
+  background-color: #dc3545;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-content h2 {
+  color: green;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
