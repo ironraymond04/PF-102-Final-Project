@@ -36,14 +36,14 @@
         }
     </style>
 </head>
-<body>
+<body onload="intro()">
     <h1 class="text-center">PADAYON O ULI</h1>
 
     <div class="container">
         <div class="button-container">
             <a href="main.html" class="btn btn-outline-primary btn-lg">Play</a><br>
             <button class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#instructionsModal">Instructions</button><br>
-            <button class="btn btn-outline-danger btn-lg" data-bs-toggle="modal" data-bs-target="#aboutModal">About</button><br>
+            <button class="btn btn-outline-danger btn-lg" data-bs-toggle="modal" data-bs-target="#aboutModal">Credits</button><br>
         </div>
     </div>
 
@@ -74,7 +74,23 @@ If they reach the end without accepting an offer, they’ll decide whether to ke
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <p>About this game: Padayon o Uli is a decision-based game that...</p>
+                    <p>Presented By (Group 3):<br>
+                       Raymond Christian A. Galanza<br>
+                       Rohandrey A. Cabug<br>
+                       Nina Mae L. Rober<br>
+                       Abigail D. Florig<br>
+                       Chinley A. Suan<br>
+                       Eves Mark Magbaril<br>
+                       <br>
+                        Inspired By:<br>
+Deal or No Deal, the original game show format created by Endemol Shine Group.<br>
+<br>
+Disclaimer:<br>
+This project is a student-made adaptation developed for academic purposes only. It is not affiliated with, endorsed by, or associated with the official Deal or No Deal franchise, Endemol Shine Group, or its licensees.<br>
+<br>
+© 2025 All Rights Reserved.<br>
+This game and all original content within it are protected under applicable copyright and intellectual property laws.<br>
+No part of this project may be copied, reproduced, or distributed without explicit permission from the developers.</p>
                     <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -82,5 +98,12 @@ If they reach the end without accepting an offer, they’ll decide whether to ke
     </div>
 
     <footer>© 2025</footer>
+
+    <script>
+        function intro() {
+            const audio = new Audio('Intro.mp3');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
