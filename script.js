@@ -108,12 +108,16 @@ function offerFromBanker() {
   });
 
   dealBtn.onclick = () => {
-    message.textContent = `Gidawat nimo ang ₱${offer.toLocaleString()}! Ang kahon nimo adunay ₱${shuffledValues[keptCaseIndex].toLocaleString()}.`;
+    const message = document.getElementById("finalMessage");
+    message.innerHTML = `Gidawat nimo ang <br>₱${offer.toLocaleString()}!<br>Ang kahon nimo adunay ₱${shuffledValues[keptCaseIndex].toLocaleString()}.`;
+    document.getElementById("endModal").style.display = "block";
+    deal();
     endGame();
   };
 
   noDealBtn.onclick = () => {
     message.textContent = "Wala gidawat! Padayon sa pag-abli sa mga kahon.";
+    nodeal();
     dealBtn.disabled = true;
     noDealBtn.disabled = true;
 
@@ -161,6 +165,15 @@ function playSound3() {
   audio.play();
 }
 
+function nodeal() {
+  const audio = new Audio('No Deal.mp3');
+  audio.play();
+}
+
+function deal() {
+  const audio = new Audio('Deal.mp3');
+  audio.play();
+}
 function endGame() {
   const cases = document.querySelectorAll(".case");
   cases.forEach((caseEl, i) => {
