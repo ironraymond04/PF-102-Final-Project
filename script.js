@@ -109,7 +109,7 @@ function offerFromBanker() {
 
   dealBtn.onclick = () => {
     const message = document.getElementById("finalMessage");
-    message.innerHTML = `Gidawat nimo ang <br>₱${offer.toLocaleString()}!<br>Ang kahon nimo adunay ₱${shuffledValues[keptCaseIndex].toLocaleString()}.`;
+    message.innerHTML = `Nanguli ka'g <br>₱${offer.toLocaleString()}!<br>Ang kahon nimo adunay ₱${shuffledValues[keptCaseIndex].toLocaleString()}.`;
     document.getElementById("endModal").style.display = "block";
     deal();
     endGame();
