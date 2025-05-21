@@ -95,7 +95,7 @@ function offerFromBanker() {
 
   const offer = Math.round(remaining.reduce((a, b) => a + b, 0) / remaining.length);
 
-  message.textContent = `Ang gipangayo: ₱${offer.toLocaleString()}. Padayon o Uli?`;
+  message.textContent = `Ang tanyag sa bangkero kay: ₱${offer.toLocaleString()}. Padayon o Uli?`;
   dealBtn.disabled = false;
   noDealBtn.disabled = false;
   playSound3();
